@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jvmcluster.ofitooapp.backend</groupId>
-        <artifactId>microservices</artifactId>
+        <artifactId>ofitoo-microservices</artifactId>
         <version>0.0.1</version>
     </parent>
 
