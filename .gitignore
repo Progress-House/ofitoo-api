@@ -1,7 +1,7 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!microservices/user/src/main/**/target/
+!microservices/user/src/test/**/target/
 
 ### IntelliJ IDEA ###
 .idea/*
@@ -25,8 +25,8 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!microservices/user/src/main/**/build/
+!microservices/user/src/test/**/build/
 
 ### VS Code ###
 .vscode/
