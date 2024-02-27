@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: productdb
+      port: 27017
+      host: localhost
