@@ -1,4 +1,4 @@
-package com.ofitoo.microservices.product.mappers;
+package com.ofitoo.microservices.product.mapper;
 
 import com.ofitoo.microservices.product.dto.CreateProductDto;
 import com.ofitoo.microservices.product.dto.ProductDto;

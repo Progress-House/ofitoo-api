@@ -2,7 +2,7 @@ package com.ofitoo.microservices.product.service;
 
 import com.ofitoo.microservices.product.dto.CreateProductDto;
 import com.ofitoo.microservices.product.dto.ProductDto;
-import com.ofitoo.microservices.product.mappers.ProductMapper;
+import com.ofitoo.microservices.product.mapper.ProductMapper;
 import com.ofitoo.microservices.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
