@@ -1,7 +1,8 @@
 package com.ofitoo.microservices.product.controller;
 
-import com.ofitoo.microservices.product.dto.CreateProductDto;
-import com.ofitoo.microservices.product.dto.ProductDto;
+
+import com.ofitoo.microservices.product.model.dto.CreateProductDto;
+import com.ofitoo.microservices.product.model.dto.ProductDto;
 import com.ofitoo.microservices.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
 package com.ofitoo.microservices.product.mapper;
 
-import com.ofitoo.microservices.product.dto.CreateProductDto;
-import com.ofitoo.microservices.product.dto.ProductDto;
-import com.ofitoo.microservices.product.entity.ProductEntity;
+import com.ofitoo.microservices.product.model.dto.CreateProductDto;
+import com.ofitoo.microservices.product.model.dto.ProductDto;
+import com.ofitoo.microservices.product.model.entity.ProductEntity;
 import org.springframework.stereotype.Component;
 
 @Component

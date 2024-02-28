@@ -1,11 +1,9 @@
-package com.ofitoo.microservices.product.dto;
+package com.ofitoo.microservices.product.model.dto;
 
-import com.ofitoo.microservices.product.enums.Visibility;
+import com.ofitoo.microservices.product.model.enums.Visibility;
 
-public record ProductDto(
-        String id,
+public record CreateProductDto(
         String name,
-        Long ownerId,
         double kcal,
         Visibility visibility,
         String barcode,

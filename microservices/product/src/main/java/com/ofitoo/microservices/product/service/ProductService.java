@@ -1,7 +1,7 @@
 package com.ofitoo.microservices.product.service;
 
-import com.ofitoo.microservices.product.dto.CreateProductDto;
-import com.ofitoo.microservices.product.dto.ProductDto;
+import com.ofitoo.microservices.product.model.dto.CreateProductDto;
+import com.ofitoo.microservices.product.model.dto.ProductDto;
 import com.ofitoo.microservices.product.mapper.ProductMapper;
 import com.ofitoo.microservices.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
