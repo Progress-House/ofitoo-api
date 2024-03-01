@@ -8,6 +8,7 @@ abstract public class ProductEntityModel {
 
     public static ProductEntity basic() {
         return ProductEntity.builder()
+                .id(null)
                 .name("Sample Product")
                 .ownerId(123L)
                 .kcal(150.0)

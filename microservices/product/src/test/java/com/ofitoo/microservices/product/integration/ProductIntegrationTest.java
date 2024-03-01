@@ -17,11 +17,11 @@ public class ProductIntegrationTest extends BaseIntegrationTest {
     public void ProductController$createProductShouldCreateProductInDatabaseAndReturnIt() {
 
         // given
-        CreateProductDto createProductDto = CreateProductDtoModel.basic();
-        ProductDto expectedProductDto = ProductDtoModel.basic();
+        final CreateProductDto createProductDto = CreateProductDtoModel.basic();
+        final ProductDto expectedProductDto = ProductDtoModel.basic();
 
         // when
-        ProductDto productDto = given()
+        final ProductDto productDto = given()
                 .header(CONTENT_TYPE, APPLICATION_JSON_VALUE)
                 .header(USER_ID, "123")
                 .and()
