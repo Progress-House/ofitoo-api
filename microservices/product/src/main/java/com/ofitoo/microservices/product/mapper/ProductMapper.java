@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductMapper {
 
-    public ProductEntity toEntity(final CreateProductDto createProductDto, final Long ownerId) {
+    public ProductEntity toEntity(final CreateProductDto createProductDto, final Long userId) {
         return ProductEntity.builder()
                 .name(createProductDto.name())
-                .ownerId(ownerId)
+                .ownerId(userId)
                 .kcal(createProductDto.kcal())
                 .visibility(createProductDto.visibility())
                 .barcode(createProductDto.barcode())
