@@ -23,6 +23,5 @@ abstract public class ProductEntityModel {
                 .description("Sample product description")
                 .manufacturer("Sample Manufacturer")
                 .build();
-
     }
 }
