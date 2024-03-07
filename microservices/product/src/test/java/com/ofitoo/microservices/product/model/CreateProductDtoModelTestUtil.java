@@ -4,7 +4,7 @@ import com.ofitoo.microservices.product.model.dto.CreateProductDto;
 
 import static com.ofitoo.microservices.product.model.enums.Visibility.PUBLIC;
 
-abstract public class CreateProductDtoModel {
+abstract public class CreateProductDtoModelTestUtil {
 
     public static CreateProductDto basic() {
         return new CreateProductDto(

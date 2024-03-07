@@ -19,6 +19,7 @@ public class ProductController {
     private final ProductService productService;
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+//    @PostMapping()
     public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody final CreateProductDto createProductDto, @RequestHeader("userId") final Long userId) {
         final ProductDto product = productService.createProduct(createProductDto, userId);
 

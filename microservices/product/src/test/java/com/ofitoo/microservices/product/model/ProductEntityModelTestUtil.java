@@ -4,7 +4,7 @@ import com.ofitoo.microservices.product.model.entity.ProductEntity;
 
 import static com.ofitoo.microservices.product.model.enums.Visibility.PUBLIC;
 
-abstract public class ProductEntityModel {
+abstract public class ProductEntityModelTestUtil {
 
     public static ProductEntity basic() {
         return ProductEntity.builder()

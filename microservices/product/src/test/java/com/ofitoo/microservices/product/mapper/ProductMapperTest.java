@@ -1,8 +1,8 @@
 package com.ofitoo.microservices.product.mapper;
 
-import com.ofitoo.microservices.product.model.CreateProductDtoModel;
-import com.ofitoo.microservices.product.model.ProductDtoModel;
-import com.ofitoo.microservices.product.model.ProductEntityModel;
+import com.ofitoo.microservices.product.model.CreateProductDtoModelTestUtil;
+import com.ofitoo.microservices.product.model.ProductDtoModelTestUtil;
+import com.ofitoo.microservices.product.model.ProductEntityModelTestUtil;
 import com.ofitoo.microservices.product.model.dto.CreateProductDto;
 import com.ofitoo.microservices.product.model.dto.ProductDto;
 import com.ofitoo.microservices.product.model.entity.ProductEntity;
@@ -16,11 +16,11 @@ public class ProductMapperTest {
     private final ProductMapper productMapper = new ProductMapper();
 
     @Test
-    void ProductMapper$toEntityShouldMapCreateProductDtoToProductEntity() {
+    void shouldMapCreateProductDtoToProductEntity() {
 
         // given
-        final CreateProductDto createProductDto = CreateProductDtoModel.basic();
-        final ProductEntity expectedProductEntity = ProductEntityModel.basic();
+        final CreateProductDto createProductDto = CreateProductDtoModelTestUtil.basic();
+        final ProductEntity expectedProductEntity = ProductEntityModelTestUtil.basic();
 
         // when
         final ProductEntity actualEntity = productMapper.toEntity(createProductDto, 123L);
@@ -32,11 +32,11 @@ public class ProductMapperTest {
     }
 
     @Test
-    void ProductMapper$toDtoShouldMapProductEntityToProductDto() {
+    void shouldMapProductEntityToProductDto() {
 
         // given
-        final ProductEntity productEntity = ProductEntityModel.basic();
-        final ProductDto expectdProductDto = ProductDtoModel.basic();
+        final ProductEntity productEntity = ProductEntityModelTestUtil.basic();
+        final ProductDto expectdProductDto = ProductDtoModelTestUtil.basic();
 
         // when
         final ProductDto actualProductDto = productMapper.toDto(productEntity);
