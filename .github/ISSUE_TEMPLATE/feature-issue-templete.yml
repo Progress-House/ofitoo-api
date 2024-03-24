@@ -24,14 +24,14 @@ body:
     id: description
     attributes:
       label: "I would like to"
+      description: "Example: I would like the application to send me a confirmation email after making the payment"
     validations:
       required: true
   - type: textarea
     id: criteria
     attributes:
-      label: "List of Acceptance Criteria"
-      description: "list of tasks to check off."
-      placeholder: "- [ ] include unit tests checking..."
+      label: "requirements"
+      value: "- [ ] include unit tests checking..."
     validations:
       required: true
   - type: textarea
@@ -46,5 +46,14 @@ body:
     attributes:
       label: "Additional Comments"
       description: "something that doesn't fit in the rest of the fields"
+    validations:
+      required: false
+
+  - type: textarea
+    id: blocked
+    attributes:
+      label: "blocked by"
+      description: 'you can copy link to issue and if is more just use "," to separate issues'
+      placeholder: https://github.com/Progress-House/ofitoo-backend/issues/1 , https://github.com/Progress-House/ofitoo-backend/issues/2
     validations:
       required: false
