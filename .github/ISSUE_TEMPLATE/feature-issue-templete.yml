@@ -2,6 +2,7 @@ name: Feature as User Story
 description: Suggest a feature from the user perspective
 title: "[Feature]: "
 labels: ["feature"]
+projects: ["Progress-Hous/9"]
 body:
   - type: markdown
     attributes:
@@ -15,12 +16,13 @@ body:
         - 'User [logged in]'
         - 'User [not logged in]'
         - 'Technical Team Member'
+      default: 0
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: "User Story"
+      label: "_____________"
       description: "Format: 'As a [role], I want / would like [feature], so that [reason].' Specify requirements."
       value: "I want to "
     validations:
