@@ -13,20 +13,20 @@ body:
   - type: dropdown
     id: role
     attributes:
-      label: "User Story: as a "
+      label: "User Story"
       description: "Select your role: user - client with account, guest - client without account, moderator - ofitoo app staff"
       options:
-        - 'user'
-        - 'guest'
-        - 'moderator'
-        - 'technical team member'
+        - 'as a user'
+        - 'as a guest'
+        - 'as a moderator'
+        - 'as a technical team member'
       default: 0
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: "_____________________________________________________________"
+      label: "-----------------------------------------------------------------"
       placeholder: "I would like to have new feature, when i do ... i want to have ..."
       description: "example: I would like the application to send me a confirmation email after making the payment"
     validations:
