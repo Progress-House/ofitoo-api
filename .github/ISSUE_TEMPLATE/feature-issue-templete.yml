@@ -1,6 +1,6 @@
 name: Feature as User Story
 description: Write user-story from selected user perspective
-title: "[Feature]: "
+title: "[Feature]: example of title"
 labels: ["feature"]
 # noinspection YAMLSchemaValidation
 projects: [ "Progress-House/9"]
@@ -9,24 +9,25 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before submitting a `feature`, please make sure there is no existing feature for the one you are requesting. If so, please provide the following information:
+        please make sure you complete all required fields
   - type: dropdown
     id: role
     attributes:
-      label: "As a "
-      description: "Select your role: User - client with account, Guest - client without account, Moderator - ofitoo app staff"
+      label: "User Story: as a "
+      description: "Select your role: user - client with account, guest - client without account, moderator - ofitoo app staff"
       options:
-        - 'User'
-        - 'Guest'
-        - 'Moderator'
-        - 'Technical Team Member'
+        - 'user'
+        - 'guest'
+        - 'moderator'
+        - 'technical team member'
       default: 0
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: "I would like to "
+      label: "_____________________________________________________________"
+      placeholder: "I would like to have new feature, when i do ... i want to have ..."
       description: "example: I would like the application to send me a confirmation email after making the payment"
     validations:
       required: true
@@ -34,7 +35,7 @@ body:
     id: requirements
     attributes:
       label: "requirements: "
-      value: "- [ ] include unit tests checking..."
+      value: "- [ ] include unit tests: when ... then ..."
     validations:
       required: true
   - type: textarea
