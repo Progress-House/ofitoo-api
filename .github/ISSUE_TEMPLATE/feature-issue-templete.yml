@@ -10,32 +10,38 @@ body:
   - type: dropdown
     id: role
     attributes:
-      label: "Your Role"
+      label: "As a "
       options:
-        - 'Developer'
-        - 'Project Manager'
-        - 'Designer'
-        - 'End User'
+        - 'User [logged in]'
+        - 'User [not logged in]'
+        - 'Technical Team Member'
     validations:
       required: true
   - type: textarea
     id: user_story
     attributes:
       label: "User Story"
-      description: "Format: 'As a [selected role], I want [feature], so that [reason].' Specify requirements."
+      description: "Format: 'As a [role], I want / would like [feature], so that [reason].' Specify requirements."
+      placeholder: "I would like to be able to display my profile data"
     validations:
       required: true
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: "Acceptance Criteria"
-      description: "Criteria for this story to be considered complete."
+      label: "List of Acceptance Criteria"
+      description: "list of tasks to check off."
+      placeholder:  "
+                    - [ ] include unit tests checking...
+                    - [ ] include integration tests with the system ... which check ...
+                    - [ ] ...
+                    - [ ] ...
+                    "
     validations:
       required: true
   - type: textarea
-    id: alternatives
+    id: examples
     attributes:
-      label: "Alternatives"
-      description: "Considered any alternatives? Describe them."
+      label: "Examples / Docs"
+      description: "sample implementation, documentation, links to YouTube."
     validations:
       required: false
