@@ -3,6 +3,7 @@ description: write user-story from selected user perspective
 title: "[Feature]: "
 labels: ["feature"]
 projects: ["Progress-House/9"]
+
 body:
   - type: markdown
     attributes:
