@@ -32,11 +32,17 @@ body:
       description: "list of tasks to check off."
       placeholder:  |
         - [ ] include unit tests checking...
+        
         - [ ] include integration tests with the system ... which check ...
+        
         - [ ] I want to view shirts
+        
         - [ ] I want to select a shirt colour
+        
         - [ ] I want to select a shirt size
+        
         - [ ] I want to add a shirt to cart
+        
         - [ ] I want to check-out my cart
     validations:
       required: true
