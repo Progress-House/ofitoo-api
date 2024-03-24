@@ -20,6 +20,7 @@ body:
         - 'as a guest'
         - 'as a moderator'
         - 'as a technical team member'
+
       default: 0
     validations:
       required: true
