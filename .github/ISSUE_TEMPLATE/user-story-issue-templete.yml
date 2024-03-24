@@ -1,0 +1,62 @@
+name: User Story - Issue Template
+description: developing task as user story issue
+title: "[Feat]: YOUR_FEATURE_NAME"
+labels: ["feature"]
+# noinspection YAMLSchemaValidation
+projects: [ "Progress-House/9"]
+
+body:
+  - type: textarea
+    id: user_story
+    attributes:
+      label: "User Story Details:"
+      description: "Please describe your feature in more detail like in the example above."
+      placeholder: "As a [role], I want [DESCRIBE_YOUR_FEATURE], so that [DESCRIBE_THE_BENEFIT]."
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: "Requirements:"
+      description: "List of requirements in markdown '- [ ] ' "
+      placeholder: "- [ ] unit test that checks adding function"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_description
+    attributes:
+      label: "Additional Description:"
+      description: "links, documentation, tutorials, additional info"
+      placeholder: "-"
+    validations:
+      required: false
+
+  - type: textarea
+    id: blocked_by
+    attributes:
+      label: "Blocked By:"
+      description: "List any dependencies or blockers for this issue. Just paste links to issues and separate them with commas"
+      placeholder: "Link to Issue #1, Link to Issue #2"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Example
+        **User Story Details":**
+        As a [user/guest/moderator/technical team member], 
+        I would like to be able to [DESCRIBE_YOUR_FEATURE] 
+        so that [DESCRIBE_THE_BENEFIT].
+
+        **Requirements:**
+        - [ ] Unit test that checks...
+        - [ ] Integration test that verifies...
+
+        **Additional Description:**
+        here should be links to documentation or other useful things
+
+        **Blocked by:** 
+        [None or paste link to issues]
