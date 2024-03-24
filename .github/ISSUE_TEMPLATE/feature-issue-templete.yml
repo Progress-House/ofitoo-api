@@ -1,46 +1,41 @@
-name: Feature Issue
-description: Suggest a new feature
-title: "[Feature]: "
-labels: ["feature"]
+name: Feature as User Story
+description: Suggest a feature from the user perspective
+title: "[User Story]: "
+labels: ["user-story", "feature"]
 body:
   - type: markdown
     attributes:
       value: |
-        Before submitting a `feature`, please make sure there is no existing feature for the one you are requesting. If so, please provide the following information:
-  - type: textarea
-    id: problem
+        **Guidelines**: Before submitting, ensure your story is new and aligns with the project's goals.
+  - type: dropdown
+    id: role
     attributes:
-      label: Problem
-      description: Is this feature related to a problem? Please describe it.
+      label: "Your Role"
+      options:
+        - 'Developer'
+        - 'Project Manager'
+        - 'Designer'
+        - 'End User'
     validations:
       required: true
   - type: textarea
-    id: solution
+    id: user_story
     attributes:
-      label: Solution
-      description: What's the proposed solution for this feature?
+      label: "User Story"
+      description: "Format: 'As a [selected role], I want [feature], so that [reason].' Specify requirements."
     validations:
       required: true
   - type: textarea
-    id: benefit
+    id: acceptance_criteria
     attributes:
-      label: Benefit
-      description: What's the benefit of adding this feature to the project?
+      label: "Acceptance Criteria"
+      description: "Criteria for this story to be considered complete."
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives
-      description: Are there other alternatives? Please describe them.
+      label: "Alternatives"
+      description: "Considered any alternatives? Describe them."
     validations:
-      required: true
-  - type: dropdown
-    id: contribute
-    attributes:
-      label: Would you like to help contributing this feature?
-      options:
-        - 'Yes'
-        - 'No'
-    validations:
-      required: true
+      required: false
