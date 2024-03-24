@@ -1,0 +1,6 @@
+#file: noinspection YAMLSchemaValidation
+blank_issues_enabled: false
+contact_links:
+  - name: Need talk with us or join as contributor?
+    url: https://discord.gg/rv5Z4jjXem
+    about: Visit our discord channel.
