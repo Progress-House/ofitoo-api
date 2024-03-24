@@ -23,7 +23,6 @@ body:
       label: " "
       description: "Format: 'As a [role], I want / would like [feature], so that [reason].' Specify requirements."
       value: "I want to "
-      placeholder: "be able to display my profile data"
     validations:
       required: true
   - type: textarea
@@ -32,8 +31,8 @@ body:
       label: "List of Acceptance Criteria"
       description: "list of tasks to check off."
       placeholder:  |
-        - [] include unit tests checking...
-        - [] include integration tests...
+        - [ ] include unit tests checking...
+        - [ ] include integration tests...
     validations:
       required: true
   - type: textarea
