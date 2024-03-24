@@ -1,0 +1,41 @@
+name: Feature as User Story
+description: Suggest a feature from the user perspective
+title: "[User Story]: "
+labels: ["user-story", "feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Guidelines**: Before submitting, ensure your story is new and aligns with the project's goals.
+  - type: dropdown
+    id: role
+    attributes:
+      label: "Your Role"
+      options:
+        - 'Developer'
+        - 'Project Manager'
+        - 'Designer'
+        - 'End User'
+    validations:
+      required: true
+  - type: textarea
+    id: user_story
+    attributes:
+      label: "User Story"
+      description: "Format: 'As a [selected role], I want [feature], so that [reason].' Specify requirements."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Criteria for this story to be considered complete."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives"
+      description: "Considered any alternatives? Describe them."
+    validations:
+      required: false
