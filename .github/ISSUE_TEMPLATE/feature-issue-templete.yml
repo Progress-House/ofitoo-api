@@ -23,7 +23,6 @@ body:
       label: " "
       description: "Format: 'As a [role], I want / would like [feature], so that [reason].' Specify requirements."
       value: "I want to "
-      placeholder: "be able to display my profile data"
     validations:
       required: true
   - type: textarea
