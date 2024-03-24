@@ -1,12 +1,12 @@
 name: Feature as User Story
 description: Suggest a feature from the user perspective
-title: "[User Story]: "
+title: "[Feature]: "
 labels: ["feature"]
 body:
   - type: markdown
     attributes:
       value: |
-        **Guidelines**: Before submitting, ensure your story is new and aligns with the project's goals.
+        Before submitting a `feature`, please make sure there is no existing feature for the one you are requesting. If so, please provide the following information:
   - type: dropdown
     id: role
     attributes:
@@ -18,7 +18,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: user_story
+    id: description
     attributes:
       label: " "
       description: "Format: 'As a [role], I want / would like [feature], so that [reason].' Specify requirements."
@@ -26,13 +26,11 @@ body:
     validations:
       required: true
   - type: textarea
-    id: acceptance_criteria
+    id: criteria
     attributes:
       label: "List of Acceptance Criteria"
       description: "list of tasks to check off."
-      placeholder:  |
-        - [] include unit tests checking...
-        - [] include integration tests...
+      placeholder: "- [ ] include unit tests checking..."
     validations:
       required: true
   - type: textarea
@@ -43,7 +41,7 @@ body:
     validations:
       required: false
   - type: textarea
-    id: additional_comments
+    id: feedback
     attributes:
       label: "Additional Comments"
       description: "something that doesn't fit in the rest of the fields"
