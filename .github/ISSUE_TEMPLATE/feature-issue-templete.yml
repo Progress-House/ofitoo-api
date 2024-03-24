@@ -1,14 +1,12 @@
 name: Feature as User Story
 description: Suggest a feature from the user perspective
 title: "[User Story]: "
-labels: ["user-story", "feature"]
-
+labels: ["feature"]
 body:
   - type: markdown
     attributes:
       value: |
         **Guidelines**: Before submitting, ensure your story is new and aligns with the project's goals.
-
   - type: dropdown
     id: role
     attributes:
@@ -19,7 +17,6 @@ body:
         - 'Technical Team Member'
     validations:
       required: true
-
   - type: textarea
     id: user_story
     attributes:
@@ -29,7 +26,6 @@ body:
       placeholder: "be able to display my profile data"
     validations:
       required: true
-
   - type: textarea
     id: acceptance_criteria
     attributes:
@@ -37,11 +33,9 @@ body:
       description: "list of tasks to check off."
       placeholder:  |
         - [] include unit tests checking...
-        
         - [] include integration tests...
     validations:
       required: true
-
   - type: textarea
     id: examples
     attributes:
@@ -49,7 +43,6 @@ body:
       description: "sample implementation, documentation, links to YouTube."
     validations:
       required: false
-
   - type: textarea
     id: additional_comments
     attributes:
