@@ -1,8 +1,9 @@
 name: Feature as User Story
-description: Suggest a feature from the user perspective
+description: write user-story from selected user perspective
 title: "[Feature]: "
 labels: ["feature"]
-projects: ["Progress-Hous/9"]
+projects: ["Progress-House/9"]
+
 body:
   - type: markdown
     attributes:
@@ -22,9 +23,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: "_____________"
-      description: "Format: 'As a [role], I want / would like [feature], so that [reason].' Specify requirements."
-      value: "I want to "
+      label: "I would like to"
     validations:
       required: true
   - type: textarea
@@ -39,7 +38,7 @@ body:
     id: examples
     attributes:
       label: "Examples / Docs / links / tutorials"
-      description: "sample implementation, documentation, links to YouTube."
+      description: "sample implementation, documentation, links to YouTube, github."
     validations:
       required: false
   - type: textarea
@@ -47,3 +46,5 @@ body:
     attributes:
       label: "Additional Comments"
       description: "something that doesn't fit in the rest of the fields"
+    validations:
+      required: false
