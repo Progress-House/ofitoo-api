@@ -1,0 +1,54 @@
+name: Feature as User Story
+description: Write user-story from selected user perspective
+title: "[Feature]: "
+labels: ["feature"]
+# noinspection YAMLSchemaValidation
+projects: [ "Progress-House/9"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting a `feature`, please make sure there is no existing feature for the one you are requesting. If so, please provide the following information:
+  - type: dropdown
+    id: role
+    attributes:
+      label: "As a "
+      description: "Select your role: User - client with account, Guest - client without account, Moderator - ofitoo app staff"
+      options:
+        - 'User'
+        - 'Guest'
+        - 'Moderator'
+        - 'Technical Team Member'
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "I would like to "
+      description: "example: I would like the application to send me a confirmation email after making the payment"
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: "requirements: "
+      value: "- [ ] include unit tests checking..."
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: "docs / links / diagrams: "
+      description: "sample implementation, documentation, links to YouTube, github for better understanding.."
+    validations:
+      required: false
+  - type: textarea
+    id: blocked
+    attributes:
+      label: "blocked by"
+      description: "List any issues that this request depends on. Separate multiple issues with a comma ','"
+      placeholder: https://github.com/Progress-House/ofitoo-backend/issues/1 , https://github.com/Progress-House/ofitoo-backend/issues/2
+    validations:
+      required: false
