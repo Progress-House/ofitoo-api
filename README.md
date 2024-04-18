@@ -33,7 +33,7 @@ The directory structure of the project is as follows including important files:
 │
 │
 ├── scripts
-      ├── docker-compose.yml
+      ├── product-db.yml
 ```
 
 ## How to build and run
@@ -52,7 +52,7 @@ If the database does not exist, it will throw an error.
 
 ```shell
 cd ofitoo-api/scripts
-docker-compose up
+product-db up
 ```
 
 ### Run Docker Compose (mongoDB)
