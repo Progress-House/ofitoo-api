@@ -1,4 +1,4 @@
-# Ofitoo - backend
+# Ofitoo Api
 oFitoo is an innovative mobile application designed to help you take care of your health , monitor your nutrition   
 and achieve goals related to diet and physical activity.   
 The application combines the best features of popular solutions such as MyFitnessPal and Fitatu, while offering   
