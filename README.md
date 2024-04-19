@@ -59,13 +59,16 @@ if you are a windows user you need to run docker desktop
 We launch the database for the service we want to launch, in this case for "product" service.
 ```shell
 cd ofitoo-api/scripts
-product-db up  # or analogously every else database
+docker-compose -f product-db.yml up -d
+# or analogously every else database
 ```
 
 ### build and run
 ```shell
 cd ofitoo-api/microservice
-cd product # or analogously other service
+cd product 
+# or analogously other service
 mvn clean package
-mvn spring-boot:run # or use run/debug configuration from intelij idea
+mvn spring-boot:run 
+# or use run/debug configuration from intelij idea
 ```
