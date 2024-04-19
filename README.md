@@ -36,28 +36,36 @@ The directory structure of the project is as follows including important files:
       ├── product-db.yml
 ```
 
-## How to build and run
-Prerequisites
+## Prerequisites
 - java 21 (graalvm-ce-21)
 - maven
-- podman or docker
+- docker
 
-### Clone the Repository
+## Clone the Repository
 ```shell
 git clone https://github.com/Progress-House/ofitoo-api
 ```
-### Run Docker Compose in order to set up a database (mongoDB)
-it is very important to do this before building the project, spring data jpa (hibernate) maps entities to the database. 
+
+## Building and Launching single Microservice
+The example shown on "product" service, analogously every else service.
+
+### Run docker-compose in order to set up a database
+It is very important to do this before building the project, spring data JPA (hibernate) maps entities to the database. 
 If the database does not exist, it will throw an error.
 
+if you are a windows user you need to run docker desktop
+
+
+We launch the database for the service we want to launch, in this case for "product" service.
 ```shell
 cd ofitoo-api/scripts
-product-db up
+product-db up  # or analogously every else database
 ```
 
-### Run Docker Compose (mongoDB)
+### build and run
 ```shell
-cd ofitoo-api/microservices
-mvn clean install
-mvn spring-boot:run
+cd ofitoo-api/microservice
+cd product # or analogously other service
+mvn clean package
+mvn spring-boot:run # or use run/debug configuration from intelij idea
 ```
