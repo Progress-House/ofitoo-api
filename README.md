@@ -74,8 +74,15 @@ mvn spring-boot:run
 ```
 
 ### Compass-UI
-if we run docker-compose for any mongoDB, we can view the database in compass UI.
-For example:
-http://localhost:8081/db/productdb/product
-Credentials: admin / pass
+if we run docker-compose for any mongoDB, we can view the database in compass UI.  
+For example:  
+http://localhost:8081/db/productdb/product  
+Credentials: admin / pass  
 ![img.png](compass-ui.png)
+
+### Swagger UI
+if we run for example product service, we can view auto documentation in swagger ui  
+and test endpoints without using Postman  
+
+![swagger-ui.png](swagger-ui.png)
+http://localhost:8080/swagger-ui/index.html  
