@@ -72,3 +72,10 @@ mvn clean package
 mvn spring-boot:run 
 # or use run/debug configuration from intelij idea
 ```
+
+### Compass-UI
+if we run docker-compose for any mongoDB, we can view the database in compass UI.
+For example:
+http://localhost:8081/db/productdb/product
+Credentials: admin / pass
+![img.png](compass-ui.png)
