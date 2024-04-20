@@ -19,7 +19,7 @@ public class ProductMapperTest {
     void shouldMapCreateProductDtoToProductEntity() {
 
         // given
-        final CreateProductDto createProductDto = CreateProductDtoModelTestUtil.basic().withBarcode("gowno");
+        final CreateProductDto createProductDto = CreateProductDtoModelTestUtil.basic();
         final ProductEntity expectedProductEntity = ProductEntityModelTestUtil.basic();
 
         // when
