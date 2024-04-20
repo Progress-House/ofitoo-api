@@ -13,7 +13,7 @@ simplicity and the ability to disconnect modules that are unnecessary for us.
 **Statistics and Charts:** Receive charts and statistics to help you monitor your progress and achieve your goals.  
 **Social and Motivation:** Allow your partner to edit your meals, making it easier to track your meals and track your performance.  
 
-![microservice-architecture.png](microservice-architecture.png)
+![microservices-architecture.png](microservices-architecture.png)
 
 ## Directory Structure
 The directory structure of the project is as follows including important files:
