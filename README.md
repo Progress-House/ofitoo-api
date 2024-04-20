@@ -63,11 +63,13 @@ docker-compose -f product-db.yml up -d
 ```shell
 cd ofitoo-api/microservice
 cd product 
-# or analogously other service
-mvn clean package
-mvn spring-boot:run 
-# or use run/debug configuration from intelij idea
 ```
+
+```shell
+mvn clean package && mvn spring-boot:run 
+```
+or use run/debug configuration from intelij idea
+
 
 ### Compass-UI
 if we run docker-compose for any mongoDB, we can view the database in compass UI.  
