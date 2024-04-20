@@ -43,7 +43,7 @@ jobs:
 
       - name: Run Coverage
         run: |
-          mvn testCoverage
+          mvn jacoco:report
 
       - name: Add coverage to PR
         id: jacoco
@@ -53,4 +53,3 @@ jobs:
             ${{ github.workspace }}/**/build/reports/jacoco/prodNormalDebugCoverage/prodNormalDebugCoverage.xml,
             ${{ github.workspace }}/**/build/reports/jacoco/**/debugCoverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-
