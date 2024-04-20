@@ -50,17 +50,13 @@ git clone https://github.com/Progress-House/ofitoo-api
 The example shown on "product" service, analogously every else service.
 
 ### Run docker-compose in order to set up a database
-It is very important to do this before building the project, spring data JPA (hibernate) maps entities to the database. 
-If the database does not exist, it will throw an error.
-
 if you are a windows user you need to run docker desktop
-
 
 We launch the database for the service we want to launch, in this case for "product" service.
 ```shell
 cd ofitoo-api/scripts
 docker-compose -f product-db.yml up -d
-# or analogously every else database
+# or analogously every else database and service
 ```
 
 ### build and run
