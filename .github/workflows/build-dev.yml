@@ -50,6 +50,7 @@ jobs:
         uses: madrapps/jacoco-report@v1.6.1
         with:
           paths: |
+            echo ${{ github.workspace }}
             ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
           token: ${{ secrets.GITHUB_TOKEN }}
 
