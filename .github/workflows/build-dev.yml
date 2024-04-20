@@ -38,23 +38,21 @@ jobs:
           java-version: '21'
           distribution: 'corretto'
 
-      - name: Run unit tests
-        run: mvn clean test
+#      - name: Run unit tests
+#        run: mvn clean test
+#
+      - name: Build with Maven
+        run: mvn -B package -Pcoverage
 
-      - name: Run Coverage
-        run: |
-          mvn jacoco:report
-          echo ${{ github.workspace }}
-
-      - name: Add coverage to PR
+      - name: Generate JaCoCo badge
         id: jacoco
-        uses: madrapps/jacoco-report@v1.6.1
+        uses: cicirello/jacoco-badge-generator@v2
         with:
-          paths: ${{ github.workspace }}/product/target/site/jacoco/jacoco.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
-          min-coverage-overall: 80
-          min-coverage-changed-files: 60
-          title: '# :recycle: Coverage Report'
-          update-comment: true
-          pass-emoji: ':green_circle:'
-          fail-emoji: ':red_circle:'
+          badges-directory: badges
+          generate-branches-badge: true
+          generate-summary: true
+
+      - name: Log coverage percentages to workflow output
+        run: |
+          echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
+          echo "branches = ${{ steps.jacoco.outputs.branches }}"
