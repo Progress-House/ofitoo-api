@@ -5,7 +5,7 @@ The application combines the best features of popular solutions such as MyFitnes
 simplicity and the ability to disconnect modules that are unnecessary for us.  
 
 
-### The main features of oFitoo are:  
+## Features:  
 
 **Calorie Intake Tracker:** Monitor your daily calorie, macronutrient and micronutrient intake to stay on top of your diet.  
 **Meal Planning:** Create personalized eating plans tailored to your goals and preferences.  
