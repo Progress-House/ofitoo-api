@@ -38,21 +38,5 @@ jobs:
           java-version: '21'
           distribution: 'corretto'
 
-#      - name: Run unit tests
-#        run: mvn clean test
-#
-      - name: Build with Maven
-        run: mvn -B package -Pcoverage
-
-      - name: Generate JaCoCo badge
-        id: jacoco
-        uses: cicirello/jacoco-badge-generator@v2
-        with:
-          badges-directory: badges
-          generate-branches-badge: true
-          generate-summary: true
-
-      - name: Log coverage percentages to workflow output
-        run: |
-          echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
-          echo "branches = ${{ steps.jacoco.outputs.branches }}"
+      - name: Run unit tests
+        run: mvn clean test
