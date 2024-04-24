@@ -4,7 +4,9 @@ target/
 !microservices/user/src/test/**/target/
 
 ### IntelliJ IDEA ###
-.idea/*
+.idea/jarRepositories.xml
+.idea/vcs.xml
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
