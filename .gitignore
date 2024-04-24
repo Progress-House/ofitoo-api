@@ -7,6 +7,9 @@ target/
 .idea/jarRepositories.xml
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/git_toolbox_prj.xml
+.idea/encodings.xml
+.idea/compiler.xml
 *.iws
 *.iml
 *.ipr
