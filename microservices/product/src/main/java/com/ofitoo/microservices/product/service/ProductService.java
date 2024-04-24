@@ -31,7 +31,7 @@ public class ProductService {
         List<ProductEntity> filteredProducts = products.stream()
                 .filter(product -> product.getOwnerId().equals(userId))
                 .sorted(Comparator.comparing(ProductEntity::getVisibility).reversed())
-                .collect(Collectors.toList());
+                .toList();
 
         return filteredProducts.stream()
                 .map(productMapper::toDto)
