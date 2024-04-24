@@ -1,0 +1,42 @@
+name: build-dev
+on:
+  push:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - 'docker/**'
+      - 'kubernetes/**'
+      - 'scripts/**'
+      - 'README.md'
+      - '.gitignore'
+
+  pull_request:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - 'docker/**'
+      - 'kubernetes/**'
+      - 'scripts/**'
+      - 'README.md'
+      - '.gitignore'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./microservices
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'corretto'
+
+      - name: Run unit tests
+        run: mvn clean test
