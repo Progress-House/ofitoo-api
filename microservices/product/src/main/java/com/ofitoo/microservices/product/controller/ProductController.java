@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
@@ -23,5 +25,11 @@ public class ProductController {
         final ProductDto product = productService.createProduct(createProductDto, userId);
 
         return ResponseEntity.ok().body(product);
+    }
+
+    @GetMapping(produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<ProductDto>>  getOwnedProductsByBarcode(@RequestParam String barcode, @RequestHeader("userId") final Long userId) {
+        List<ProductDto> products = productService.getOwnedProductsByBarcode(barcode, userId);
+        return ResponseEntity.ok().body(products);
     }
 }

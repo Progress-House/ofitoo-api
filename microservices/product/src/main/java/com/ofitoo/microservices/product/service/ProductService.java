@@ -8,6 +8,10 @@ import com.ofitoo.microservices.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class ProductService {
@@ -20,5 +24,18 @@ public class ProductService {
         final ProductEntity savedEntity = productRepository.insert(product);
 
         return productMapper.toDto(savedEntity);
+    }
+
+    public List<ProductDto> getOwnedProductsByBarcode(String barcode, Long userId) {
+        List<ProductEntity> products = productRepository.findByBarcode(barcode);
+        List<ProductEntity> filteredProducts = products.stream()
+                .filter(product -> product.getOwnerId().equals(userId))
+                .sorted(Comparator.comparing(ProductEntity::getVisibility).reversed())
+                .collect(Collectors.toList());
+
+        return filteredProducts.stream()
+                .map(productMapper::toDto)
+                .collect(Collectors.toList());
+
     }
 }
