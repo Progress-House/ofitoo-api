@@ -42,7 +42,7 @@ public class ProductIntegrationTest extends BaseIntegrationTest {
     }
 
     @Test
-    public void shouldReturnOwnedProductsByBarcode(){
+    public void shouldReturnOwnedProductsByBarcode() {
 
         // given
         final CreateProductDto createProductDto = CreateProductDtoModelTestUtil.basic();
@@ -69,5 +69,23 @@ public class ProductIntegrationTest extends BaseIntegrationTest {
         assertThat(productDtos).isNotEmpty();
         for (ProductDto productDto : productDtos) {
             assertThat(productDto.barcode()).isEqualTo("123456789");
+        }
     }
-}}
+
+    @Test
+    public void shouldReturnEmptyListWhenBarcodeNotFound() {
+        // given
+        // when
+        final List<ProductDto> productDtos = given()
+                .header(USER_ID, "123")
+                .param("barcode", "987654321")
+                .when()
+                .get(BASE_PATH)
+                .then()
+                .statusCode(200)
+                .extract().jsonPath().getList(".", ProductDto.class);
+
+        // then
+        assertThat(productDtos).isEmpty();
+    }
+}
