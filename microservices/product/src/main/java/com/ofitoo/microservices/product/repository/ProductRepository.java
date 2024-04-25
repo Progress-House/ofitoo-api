@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ProductRepository extends MongoRepository<ProductEntity, String> {
 
-    List<ProductEntity> findByBarcode(String barcode);
+    List<ProductEntity> findByBarcodeAndOwnerId(String barcode, Long ownerId);
 }

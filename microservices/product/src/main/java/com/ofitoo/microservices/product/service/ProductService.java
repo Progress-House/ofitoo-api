@@ -26,10 +26,9 @@ public class ProductService {
         return productMapper.toDto(savedEntity);
     }
 
-    public List<ProductDto> getOwnedProductsByBarcode(String barcode, Long userId) {
-        List<ProductEntity> products = productRepository.findByBarcode(barcode);
+    public List<ProductDto> getOwnedProductsByBarcode(final String barcode, final Long userId) {
+        List<ProductEntity> products = productRepository.findByBarcodeAndOwnerId(barcode, userId);
         List<ProductEntity> filteredProducts = products.stream()
-                .filter(product -> product.getOwnerId().equals(userId))
                 .sorted(Comparator.comparing(ProductEntity::getVisibility).reversed())
                 .toList();
 
