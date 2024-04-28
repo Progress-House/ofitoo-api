@@ -3,6 +3,7 @@ package com.ofitoo.microservices.product.controller;
 
 import com.ofitoo.microservices.product.model.dto.CreateProductDto;
 import com.ofitoo.microservices.product.model.dto.ProductDto;
+import com.ofitoo.microservices.product.model.dto.ProductDtoList;
 import com.ofitoo.microservices.product.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -34,8 +35,10 @@ public class ProductController {
     }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<ProductDto>> getOwnedProductsByBarcode(@RequestParam String barcode, @RequestHeader("userId") final Long userId) {
-        List<ProductDto> products = productService.getOwnedProductsByBarcode(barcode, userId);
-        return ResponseEntity.ok().body(products);
+    public ResponseEntity<ProductDtoList> getOwnedProductsByBarcode(@RequestParam String barcode, @RequestHeader("userId") final Long userId) {
+        final List<ProductDto> products = productService.getOwnedProductsByBarcode(barcode, userId);
+        ProductDtoList response = new ProductDtoList(products);
+
+        return ResponseEntity.ok().body(response);
     }
 }
