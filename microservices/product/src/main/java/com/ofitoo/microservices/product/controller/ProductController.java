@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
@@ -36,9 +34,8 @@ public class ProductController {
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<ProductDtoList> getOwnedProductsByBarcode(@RequestParam String barcode, @RequestHeader("userId") final Long userId) {
-        final List<ProductDto> products = productService.getOwnedProductsByBarcode(barcode, userId);
-        ProductDtoList response = new ProductDtoList(products);
+        final ProductDtoList matchingProducts = productService.getOwnedProductsByBarcode(barcode, userId);
 
-        return ResponseEntity.ok().body(response);
+        return ResponseEntity.ok().body(matchingProducts);
     }
 }
