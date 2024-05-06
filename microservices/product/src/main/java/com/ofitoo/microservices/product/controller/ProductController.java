@@ -33,7 +33,7 @@ public class ProductController {
     }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<ProductDtoList> getOwnedProductsByBarcode(@RequestParam String barcode, @RequestHeader("userId") final Long userId) {
+    public ResponseEntity<ProductDtoList> getOwnedProductsByBarcode(@RequestParam("barcode") String barcode, @RequestHeader("userId") final Long userId) {
         final ProductDtoList matchingProducts = productService.getOwnedProductsByBarcode(barcode, userId);
 
         return ResponseEntity.ok().body(matchingProducts);

@@ -13,6 +13,7 @@ public class BaseIntegrationTest {
 
     protected final String CONTENT_TYPE = "Content-type";
     protected final String USER_ID = "userId";
+    protected final String BARCODE = "barcode";
     protected final String BASE_PATH = "/api/v1/product";
 
 
